@@ -1,0 +1,26 @@
+employees = [
+    {
+        "id": 1,
+        "first_name": "Bruce",
+        "last_name": "Wayne",
+        "email": "batman@gmail.com"
+    },
+    {
+        "id": 2,
+        "first_name": "Clark",
+        "last_name": "Kent",
+        "email": "Superman@gmail.com"
+    },
+    {
+        "id": 3,
+        "first_name": "Frank",
+        "last_name": "Castle",
+        "email": "Punisher@gmail.com"
+    },
+    {
+        "id": 4,
+        "first_name": "Tony",
+        "last_name": "Stark",
+        "email": "Ironman@gmail.com"
+    }    
+]
