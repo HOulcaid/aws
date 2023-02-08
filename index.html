@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Bank Account</title>
+  </head>
+  <body>
+    <h1>Bank Account</h1>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <form action="/deposit" method="post">
+      <select name="client">
+        <option value="client1">Client 1</option>
+        <option value="client2">Client 2</option>
+        <option value="client3">Client 3</option>
+      </select>
+      <input type="text" name="amount">
+      <button type="submit">Deposit</button>
+    </form>
+    <form action="/withdraw" method="post">
+      <select name="client">
+        <option value="client1">Client 1</option>
+        <option value="client2">Client 2</option>
+        <option value="client3">Client 3</option>
+      </select>
+      <input type="text" name="amount">
+      <button type="submit">Withdraw</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+version: "3.7"
+
+services:
+
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+
+## database configuration
+  db:
+    container_name: aws_hassan
+    image: houlcaid/projet-pro-2022:projet-postgres
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=aws
+      - MARIADB_DATABASE=sdv
+      - MARIADB_USER=hassan
+      - MARIADB_PASSWORD=aws
+    volumes:
+      - ./database:/var/lib/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - projet
+
+
+## pgadmin configuration
+  pgadmin:
+      container_name: aws_hassan
+      image: houlcaid/projet-pro-2022:projet-pgadmin
+      restart: always
+      environment:
+        PGADMIN_DEFAULT_EMAIL: hassanoulcaid@outlook.com
+        PGADMIN_DEFAULT_PASSWORD: aws
+      ports:
+        - "5050:80"
+      networks:
+        - aws
+
+
+volumes:
+  db:
+
+networks:
+  aws:
+    name: aws
+    external: true
+ 
